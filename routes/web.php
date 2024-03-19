@@ -11,7 +11,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello-world',[\App\Http\Controllers\HelloWorldController::class, 'helloWorld']);
+#Route::get('/hello-world',[\App\Http\Controllers\HelloWorldController::class, 'helloWorld']);
+Route::get('/hello-world', function () {
+    return view('helloWorld');
+});
 
 Route::get('/hello/{name?}', [\App\Http\Controllers\HelloWorldController::class, 'hello']);
 

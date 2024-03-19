@@ -11,6 +11,9 @@ class HelloWorldController extends Controller
     }
 
     public function hello($name = 'Fulano'){
+        if ($name == 'Abacate'){
+            return 'Ótima fruta!';
+        }
         return 'Hello, ' . $name;
     }
 }
